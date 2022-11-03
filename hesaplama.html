@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Takdir Teşekkür Hesaplama</h1>
+
+
+    <a>Türkçe </a><input type="number" oninput="hesapla()" placeholder="Notunuzu Girin" id="turk">
+    <br>
+    <a>Matematik </a><input type="number" oninput="hesapla()" placeholder="Notunuzu Girin" id="mat">
+    <br>
+    <a>Fizik </a><input type="number" oninput="hesapla()" placeholder="Notunuzu Girin" id="fiz">
+    <br>
+    <a>Kimya </a><input type="number" oninput="hesapla()" placeholder="Notunuzu Girin" id="kim">
+    <br>
+    <a>Biyoloji </a><input type="number" oninput="hesapla()" placeholder="Notunuzu Girin" id="bio">
+    <br><br>
+    <p id="not"></p>
+    <p id="tak"></p>
+
+    <script>
+        function hesapla(){
+            var turk = Number(document.getElementById("turk").value)
+            var mat = Number(document.getElementById("mat").value)
+            var fiz = Number(document.getElementById("fiz").value)
+            var kim = Number(document.getElementById("kim").value)
+            var bio = Number(document.getElementById("bio").value)
+    
+            var sonuc = ((turk*5)+(mat*5)+(fiz*5)+(kim*5)+(bio*5))/25
+            document.getElementById("not").innerHTML = sonuc
+            
+            if(sonuc >= 85){
+                console.log("ss")
+                document.getElementById("tak").innerHTML= "Tebrikler Kardeşim Takdir Kazandın!"
+            }
+            else if(sonuc >=70 && sonuc < 85 ){
+                document.getElementById("tak").innerHTML= "Helal Olsun Aslan Teşekkür Kazandın! Seneye Daha Çok Çalış."
+            }
+            
+        }
+        
+    </script>
+
+
+
+
+
+<!-- 
+    <script>
+        function hesapla(){
+            var boy = Number(document.getElementById("boy").value)
+            var kilo = Number(document.getElementById("kilo").value)
+            var sonuc = kilo/((boy/100)**2)
+            sonuc = sonuc .toFixed(2);
+            document.getElementById("bmi").innerHTML = sonuc
+        }
+        
+
+
+
+    </script> -->
+    
+
+
+
+
+
+</body>
+</html>
